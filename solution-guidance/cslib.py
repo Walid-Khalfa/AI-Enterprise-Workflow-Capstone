@@ -219,6 +219,8 @@ def engineer_features(df,training=True):
     return(X,y,dates)
 
 
+# Modular data processing
+# Reusable across training and production
 if __name__ == "__main__":
 
     run_start = time.time() 
@@ -233,3 +235,9 @@ if __name__ == "__main__":
 
     for key,item in ts_all.items():
         print(key,item.shape)
+
+
+# Génération de graphiques de comparaison
+def generate_performance_plot(baseline, current):
+    plt.plot(baseline, label='Base')
+    plt.plot(current, label='Modèle')
