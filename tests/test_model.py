@@ -1,4 +1,6 @@
-# Ajout de tests pour le modèle
+from solution_guidance.cslib import fetch_data, train_model
+
 def test_model_accuracy():
-    # Vérification que l'accuracy dépasse 0.85
+    data = fetch_data('cs-train')
+    model, accuracy = train_model(data)
     assert accuracy > 0.85

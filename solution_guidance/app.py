@@ -1,5 +1,11 @@
-from fastapi import FastAPI
+import logging
+from fastapi import FastAPI, Request
+from .cslib import fetch_data, train_model, save_model, predict
+import time
 app = FastAPI()
+
+# Configure logging
+logging.basicConfig(filename='api.log', level=logging.INFO)
 
 # Model endpoints placeholder
 @app.post("/train")
