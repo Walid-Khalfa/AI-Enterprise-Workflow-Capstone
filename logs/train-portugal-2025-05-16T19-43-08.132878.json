@@ -1,0 +1,19 @@
+[
+    {
+        "timestamp": "2025-05-16T19:43:08.132878",
+        "log_type": "train",
+        "country": "portugal",
+        "model_version": 0.1,
+        "model_version_note": "supervised learing model for time-series",
+        "runtime": "000:00:01",
+        "test_mode": false,
+        "training_data_start_date": "2017-11-29",
+        "training_data_end_date": "2019-05-31",
+        "evaluation_metrics": {
+            "rmse": 364
+        }
+    }
+]2025-05-16 19:43:08,133 - INFO - Successfully logged train event for portugal
+2025-05-16 19:43:08,943 - INFO - Successfully logged train event for singapore
+2025-05-16 19:43:11,404 - INFO - Successfully logged train event for spain
+2025-05-16 19:43:13,149 - INFO - Successfully logged train event for united_kingdom

@@ -48,6 +48,13 @@ This repository contains the files for the IBM AI Enterprise Workflow Capstone p
 3. **Test-Driven Development**: Iterate on the API considering scale, load, and drift.
 4. **Post-Production Analysis**: Analyze the relationship between model performance and business metrics.
 
+# Solution Guidance
+
+Need some guidance with the capstone project solution? We have provided two code files that will help.
+
+* **cslib.py**: A collection of functions that will transform the data set into features you can use to train a model.
+* **model.py**: Provides you with a working solution (i.e., a model) for capstone part 2.
+
 ### Deployment
 
 - Prepare the model for deployment with a Flask API for training and prediction.
