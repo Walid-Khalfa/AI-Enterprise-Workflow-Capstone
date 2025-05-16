@@ -1,0 +1,21 @@
+[
+    {
+        "timestamp": "2025-05-16T20:10:43.870044",
+        "log_type": "train",
+        "country": "netherlands",
+        "model_version": 0.1,
+        "model_version_note": "supervised learing model for time-series",
+        "runtime": "000:00:03",
+        "test_mode": false,
+        "training_data_start_date": "2017-11-30T00:00:00",
+        "training_data_end_date": "2019-05-31T00:00:00",
+        "evaluation_metrics": {
+            "rmse": 129
+        }
+    }
+]2025-05-16 20:10:43,871 - INFO - Successfully logged train event for netherlands
+2025-05-16 20:10:45,263 - INFO - Successfully logged train event for norway
+2025-05-16 20:10:47,558 - INFO - Successfully logged train event for portugal
+2025-05-16 20:10:49,357 - INFO - Successfully logged train event for singapore
+2025-05-16 20:10:51,058 - INFO - Successfully logged train event for spain
+2025-05-16 20:10:53,744 - INFO - Successfully logged train event for united_kingdom

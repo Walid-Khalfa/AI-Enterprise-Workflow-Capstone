@@ -1,0 +1,17 @@
+[
+    {
+        "timestamp": "2025-05-16T20:08:53.945612",
+        "log_type": "train",
+        "country": "all",
+        "model_version": 0.1,
+        "model_version_note": "supervised learing model for time-series",
+        "runtime": "000:00:04",
+        "test_mode": true,
+        "training_data_start_date": "2017-11-29T00:00:00",
+        "training_data_end_date": "2019-05-20T00:00:00",
+        "evaluation_metrics": {
+            "rmse": 33659
+        }
+    }
+]2025-05-16 20:08:53,946 - INFO - Successfully logged train event for all
+2025-05-16 20:08:56,462 - INFO - Successfully logged train event for united_kingdom
