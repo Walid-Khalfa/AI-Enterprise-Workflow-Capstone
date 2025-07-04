@@ -1,108 +1,163 @@
-# Easy-Dashboard : Starter Kit CRM avec MERN & Ant Design
+Certainly! Here's the **English version** of a clear, well-structured `README.md` file for your project **[AI-Enterprise-Workflow-Capstone](https://github.com/Walid-Khalfa/AI-Enterprise-Workflow-Capstone)**:
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+```markdown
+# AI Enterprise Workflow Capstone
 
-![Easy-Dashboard Screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/opp4yj177dizyaosah0o.png)
-
-**Easy-Dashboard** est un kit de démarrage complet pour construire des applications de type CRM ou panneau d'administration. Basé sur le stack **MERN** (MongoDB, Express.js, React, Node.js) et utilisant la bibliothèque de composants **Ant Design**, ce projet fournit une base solide avec les fonctionnalités essentielles déjà implémentées.
-
-Ce kit est conçu pour accélérer votre développement en vous fournissant une authentification sécurisée, une gestion des utilisateurs et des opérations CRUD génériques prêtes à l'emploi.
+> Final capstone project for the **IBM AI Enterprise Workflow** specialization
 
 ---
 
-### 🚀 Démo en Ligne
+## 🎯 Project Objective
 
-Accédez à la version de démonstration pour tester l'application en direct.
-
-**URL :** [**https://antd-admin-yle2f.ondigitalocean.app**](https://antd-admin-yle2f.ondigitalocean.app)
-
-> **Identifiants de connexion :**
-> * **Email :** `admin@demon.com`
-> * **Mot de passe :** `admin123`
+This project simulates a full AI workflow around a fictional business case (forecasting AAVAIL revenue), reflecting the three major components of the specialization:
+1. **Data ingestion & exploration**
+2. **Model development & evaluation**
+3. **Deployment & monitoring**
 
 ---
 
-### ✨ Fonctionnalités Principales
+## 🗂️ Project Structure
 
-* **🔐 Authentification Sécurisée :** Flux de connexion/déconnexion complet basé sur les JSON Web Tokens (JWT).
-* **👤 Gestion des Utilisateurs :** CRUD complet pour la gestion des administrateurs et des utilisateurs.
-* **⚙️ Modules CRUD Génériques :** Composants React et routes d'API réutilisables pour créer, lire, mettre à jour et supprimer n'importe quel type de données, accélérant ainsi le développement de nouvelles fonctionnalités.
-* **🎨 Interface Élégante avec Ant Design :** Un tableau de bord à l'interface utilisateur soignée et réactive, construite avec React et la bibliothèque de composants [Ant Design (Antd)](https://ant.design/).
-* **🌐 Gestion d'État Centralisée :** Logique d'état globale gérée avec Redux et Redux-Thunk pour une application prévisible et maintenable.
-* **🔒 Routes Protégées :** Mise en place de routes privées et publiques pour s'assurer que seuls les utilisateurs authentifiés peuvent accéder aux pages sensibles.
+```
 
----
+├── data/                 # Raw datasets
+├── src/
+│   ├── ingest.py        # Data ingestion and cleaning script
+│   ├── model.py         # Model training and prediction logic
+│   ├── api.py           # API implementation (FastAPI or Flask)
+│   └── monitor.py       # Drift detection and monitoring tools
+├── nb/                  # Jupyter notebooks for exploration & reporting
+├── tests/               # Unit tests (model, API, logging)
+├── Dockerfile           # For containerization
+├── run\_app.py           # Script to run the API locally
+├── run\_tests.py         # Run all unit tests
+└── README.md            # This file
 
-### 🛠️ Stack Technique
-
-| Domaine | Technologies |
-| :--- | :--- |
-| **Backend** | Node.js, Express.js, MongoDB, Mongoose, JWT |
-| **Frontend** | React.js, Redux, Redux-Thunk, Ant Design (Antd) |
-| **Base de Données** | MongoDB (via MongoDB Atlas) |
-
----
-
-### 🏁 Démarrage Rapide
-
-Suivez ces étapes pour lancer le projet sur votre machine locale.
-
-#### **Prérequis**
-
-* [Node.js](https://nodejs.org/) (version 14.x ou supérieure)
-* `npm` ou `yarn`
-* Un compte [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) pour obtenir une URL de connexion à la base de données.
-
-#### **Installation**
-
-1.  **Clonez le dépôt :**
-    ```bash
-    git clone [https://github.com/Walid-Khalfa/easy-dashboard.git](https://github.com/Walid-Khalfa/easy-dashboard.git)
-    cd easy-dashboard
-    ```
-
-2.  **Configurez le Backend :**
-    ```bash
-    # Créez votre fichier d'environnement à partir du modèle
-    cp .variables.env.tmp .variables.env
-    ```
-    Ouvrez le fichier `.variables.env` et collez votre URL de connexion MongoDB :
-    ```env
-    DATABASE=VOTRE_URL_MONGODB_ATLAS
-    ```
-
-3.  **Installez les dépendances du Backend :**
-    ```bash
-    npm install
-    ```
-    *Optionnel : La commande `npm run setup` peut être utilisée si elle sert à peupler la base de données avec des données initiales.*
-
-4.  **Installez les dépendances du Frontend :**
-    ```bash
-    cd frontend
-    npm install
-    ```
+````
 
 ---
 
-### 🚀 Lancement de l'Application
+## 🧪 Part 1: Data Exploration & Ingestion
 
-Vous devrez lancer le serveur backend et l'application React dans deux terminaux distincts.
-
-1.  **Lancer le serveur Backend** (depuis le dossier racine `easy-dashboard`):
-    ```bash
-    npm start
-    ```
-    Le serveur sera accessible sur `http://localhost:8000` (ou le port défini).
-
-2.  **Lancer l'application React** (depuis le dossier `easy-dashboard/frontend`):
-    ```bash
-    npm start
-    ```
-    L'application sera accessible sur `http://localhost:3000`.
+- **Key steps**:
+  - Understanding the business problem and formulating hypotheses
+  - Identifying relevant data and justifying its use
+  - Loading and cleaning via `src/ingest.py`
+- **Deliverables**:
+  - Notebooks in `nb/` (EDA, visualizations, feature analysis)
+  - Automated data ingestion pipeline
 
 ---
 
-### 📄 Licence
+## 📈 Part 2: Modeling & Evaluation
 
-Ce projet est distribué sous la licence MIT. Voir le fichier `LICENSE` pour plus de détails.
+- **Models tested**: ARIMA/SARIMA, Random Forest, SVM, Gaussian Processes, etc.
+- **Pipeline**:
+  - Feature engineering (e.g. lag features, rolling windows)
+  - Model training, validation, and selection
+- **Outputs**:
+  - Performance comparisons (see `nb/results.ipynb`)
+  - Final model exported via `src/model.py`
+
+---
+
+## 🚀 Part 3: API, Deployment & Monitoring
+
+- **API**:
+  - Endpoints: `/predict`, `/train`, `/logs`, `/monitor`
+  - Implemented in `src/api.py`, tested in `tests/`
+- **Containerization**:
+  - Docker image for deployment
+- **CI & Testing**:
+  - Pytest for unit testing across all components
+- **Monitoring**:
+  - Drift detection logic in `src/monitor.py` (e.g. Wasserstein distance)
+  - Auto-generated model performance reports
+
+---
+
+## 🚀 Getting Started
+
+### Install dependencies
+```bash
+git clone https://github.com/Walid-Khalfa/AI-Enterprise-Workflow-Capstone.git
+cd AI-Enterprise-Workflow-Capstone
+pip install -r requirements.txt
+````
+
+### Run the API locally
+
+```bash
+python run_app.py
+```
+
+### Or run with Docker
+
+```bash
+docker build -t ai-capstone .
+docker run -p 8000:80 ai-capstone
+```
+
+### Example requests
+
+```bash
+curl -X POST "http://localhost:8000/predict?date=2025-07-01&duration=30"
+curl -X POST "http://localhost:8000/predict?date=2025-07-01&country=France"
+```
+
+### Run unit tests
+
+```bash
+python run_tests.py
+```
+
+---
+
+## 🧩 Tech Stack
+
+* **Language**: Python 3.x
+* **Libraries**: pandas, numpy, scikit-learn, statsmodels, Prophet, FastAPI/Flask, Pytest
+* **Containerization**: Docker
+* **Monitoring**: model drift detection (Wasserstein distance, KPI deviation)
+
+---
+
+## 📊 Results & Metrics
+
+* Final model: **\[Insert best model name]**
+* Evaluation metric: **e.g., RMSE = X.XX**, compared to baseline
+* Forecast visualizations available in `nb/`
+
+---
+
+## ✅ Unit Testing Coverage
+
+* **Ingestion**: schema and consistency validation
+* **Model**: minimum performance threshold enforcement
+* **API & Logging**: response validation, log structure tests
+* **Monitoring**: drift detection validated on synthetic and real data
+
+---
+
+## 📝 License & Contributions
+
+* Open-source under the **MIT License**
+* Contributions welcome via pull requests or issues
+
+---
+
+## 📚 References
+
+* IBM AI Enterprise Workflow Specialization
+* Official documentation for used libraries
+
+---
+
+## 📬 Contact
+
+Walid Khalfa
+\ linkedin.com/in/walid-khalfa-41821513
+
+```
+
+
